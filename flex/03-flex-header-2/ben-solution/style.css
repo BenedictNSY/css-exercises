@@ -15,15 +15,11 @@ body {
   padding: 8px;
   display: flex;
   justify-content: space-between;
+}
+
+.left-side, .right-side {
+  display: flex;
   align-items: center;
-}
-
-.left-side {
-  display: flex;
-}
-
-.right-side {
-  display: flex;
   gap: 8px;
 }
 
@@ -59,5 +55,79 @@ a {
 ul {
   list-style-type: none;
   display: flex;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+}
+
+/* The following is my initial solution:
+
+body {
+  margin: 0;
+  background: #eee;
+  font-family: Besley, serif;
+}
+
+.header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 0 8px rgba(0,0,0,.1);
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+For header:
+Align-items should be defined within left-side and right-side as it is not an inherited property. Ie it does not impact the child. 
+
+.left-side {
+  display: flex;
+}
+
+.right-side {
+  display: flex;
   gap: 8px;
 }
+
+For left/right-side:
+Can consolidate together. gap can be 16px. align-items must be defined here to get the desired outcome. It cannot be defined in the header as it cannot inherit from the parent.
+
+.profile-image {
+  background: rebeccapurple;
+  box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
+  border-radius: 50%;
+  width: 48px;
+  height:  48px;
+}
+
+.logo {
+  color: rebeccapurple;
+  font-size: 32px;
+  font-weight: 900;
+  font-style: italic;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  background: rebeccapurple;
+  color: white;
+  padding: 8px 24px;
+}
+
+a {
+  text-decoration: none;
+  color: rebeccapurple;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 8px;
+}
+
+For ul:
+Margin and padding can be defined as 0 to fit the desired outcome. Gap 16px recommended.
+
+*/
