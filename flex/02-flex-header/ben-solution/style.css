@@ -2,11 +2,49 @@
   font-family: monospace;
   background: papayawhip;
   margin: 0px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 48px;
+  font-weight: 900;
+  color: tomato;
+  background: white;
+  padding: 4px 32px;
+}
+
+ul {
+  list-style-type: none; 
+  gap: 8px;
+  display: flex;
+}
+
+a {
+  font-size: 22px;
+  background: white;
+  padding: 8px;
+  text-decoration: none;
+}
+
+/*
+
+The following is my initial solution:
+
+.header  {
+  font-family: monospace;
+  background: papayawhip;
+  margin: 0px;
   padding: 0px;
   display: flex;
   flex: auto;
   justify-content: space-between;
 }
+
+For header:
+align-items to be placed here as all child are required to be centered. defining it here make it efficient as there's no need to define it in the other children. however, this can only apply if the formatting for all children is the same.
 
 .logo {
   font-size: 48px;
@@ -16,6 +54,9 @@
   margin: 10px;
   padding: 4px 32px;
 }
+ 
+For logo:
+margin does not need to be defined here as padding already provides the required space.
 
 .left-links {
   display: flex;
@@ -29,16 +70,28 @@
   justify-content: space-between;
 }
 
+For left/right-links:
+This is not required as the rules are already defined by the header.
+
 ul {
-  list-style-type: none; /* this removes the dots on the list items*/
+  list-style-type: none;
   padding: 4px;
   display: flex;
 }
+
+For ul:
+padding does not need to be defined as it has been defined in the header.
+gap should be defined here as the gap is only required for the ul.
 
 a {
   font-size: 22px;
   background: white;
   margin: 5px;
   padding: 8px;
-  text-decoration: none; /* this removes the line under the links */
+  text-decoration: none;
 }
+
+For a:
+improper to use margin to make gaps. define gap in the ul using <gap>
+
+*/
