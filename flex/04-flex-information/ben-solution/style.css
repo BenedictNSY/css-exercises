@@ -1,5 +1,6 @@
 body {
   font-family: 'Courier New', Courier, monospace;
+  text-align: center;
 }
 
 img {
@@ -15,19 +16,14 @@ img {
   margin: 32px;
 }
 
-ul {
-  list-style-type: none;
+.container {
   display: flex;
-  gap: 52px;
+  justify-content: center;
+  gap: 52;
 }
 
 .plant {
-  display: flex;
-  justify-content: center;
-}
-
-.text {
-  text-align: center;
+  max-width: 200px;
 }
 
 /* do not edit this footer */
@@ -42,3 +38,54 @@ ul {
   justify-content: center;
   background: #eee;
 }
+
+/* The following is my initial solution
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+For body:
+need to add text-align:center. this allows all text and images to auto center on the page.
+
+img {
+  width: 100px;
+  height: 100px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  margin: 32px;
+}
+
+For .title:
+margin-bottom instead of margin is used. This provides more specificity as per the requirement however I believe both can be accepted.
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 52px;
+}
+
+For ul:
+solution uses a div called "container" group the plants. justify-content: center was defined here instead of the child.
+
+.plant {
+  display: flex;
+  justify-content: center;
+}
+
+For plant:
+solution classifies this as info. only max-width is defined here at 200px.
+
+.text {
+  text-align: center;
+}
+
+For .text:
+There's no need for this as ul/container has justify content defined.
+
+*/
