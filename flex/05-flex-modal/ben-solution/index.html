@@ -11,6 +11,24 @@
     <div class="modal">
       <div class="icon">!</div>
       <div class="container">
+        <div class="header">Are you sure you want to do that?
+          <div class="close-button">✖</div>
+        </div>
+        <div class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur excepturi id soluta, numquam minima rerum doloremque eveniet aspernatur beatae commodi. Cupiditate recusandae ad repellendus quidem consectetur sequi amet aspernatur cumque!</div>
+        <button class="continue">Continue</button>
+        <button class="cancel">Cancel</button>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+Initial Solution:
+
+<body>
+    <div class="modal">
+      <div class="icon">!</div>
+      <div class="container">
         <div class="top">
           <div class="header">Are you sure you want to do that?</div>
           <div class="close-button">✖</div>
@@ -22,4 +40,10 @@
       </div>
     </div>
   </body>
-</html>
+
+Note:
+class="top" is not necessary to allow the space-between to take effect for both class="heder" and class="close-button". While the solution is different from the initial solution, this means less line to maintain.
+
+removed additional hanging </div>
+
+-->

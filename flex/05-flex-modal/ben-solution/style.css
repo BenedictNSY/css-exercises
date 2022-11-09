@@ -36,26 +36,16 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
   flex-shrink: 0;
-}
-
-.container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.top {
-  display: flex;
-  justify-content: space-between;
-  flex: 1;
 }
 
 .header {
   font-weight: bold;
   font-size: larger;
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
 }
 
 .close-button {
@@ -87,3 +77,112 @@ button.cancel {
   border: 1px solid #ddd;
   color: royalblue;
 }
+
+.text {
+  margin-bottom: 16px;
+}
+
+/*
+Initial Solution:
+
+.modal {
+  background: white;
+  width: 480px;
+  border-radius: 10px;
+  box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+}
+
+Modal:
+padding:16px
+gap: 16px
+otherwise no issues with initial solution.
+
+.icon {
+  color: royalblue;
+  font-size: 26px;
+  font-weight: 700;
+  background: lavender;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+Icon:
+flex direction does not need to be defined.
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+Container:
+no css to be defined
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+}
+
+Top:
+to be removed due to amendments to html. As class="header" houses the close button as well. However, initial solution works.
+
+.header {
+  font-weight: bold;
+  font-size: larger;
+  display: flex;
+}
+
+Header:
+font-size: 18px
+font-weight: 200
+margin-bottom set to 8px, to allow for the space between the class="header" and the text.
+As class="header" is parent of "close-button" justify content: space-between can be used to ensure "close-button always sits on the right side of the header.
+align-items: center is added as well.
+
+.close-button {
+  background: #eee;
+  border-radius: 50%;
+  color: #888;
+  font-weight: 400;
+  font-size: 16px;
+  height: 24px;
+  width: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+button.continue {
+  background: royalblue;
+  border: 1px solid royalblue;
+  color: white;
+}
+
+button.cancel {
+  background: white;
+  border: 1px solid #ddd;
+  color: royalblue;
+}
+
+To add::
+.text {
+  margin-bottom: 16px
+}
+This is to provide spacing between the text and the buttons.
+
+*/
