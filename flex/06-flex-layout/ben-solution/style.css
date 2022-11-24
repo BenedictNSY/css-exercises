@@ -5,6 +5,8 @@ body {
   margin: 0;
   overflow: hidden;
   font-family: Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
 }
 
 img {
@@ -16,7 +18,76 @@ button {
   border: none;
   border-radius: 8px;
   background: #eee;
+  padding: 8px 16px;
 }
+
+.content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+.header,
+.footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.footer {
+  background: #eee;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 16px;
+}
+
+input {
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  padding: 8px 24px;
+  width: 400px;
+  margin-bottom: 16px;
+}
+
+/*
+Initial Solution:
+
+body {
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  font-family: Roboto, sans-serif;
+}
+
+Body:
+display: flex is defined here.
+flex-direction: column is defined here.
+
+img {
+  width: 600px;
+}
+
+button {
+  font-family: Roboto, sans-serif;
+  border: none;
+  border-radius: 8px;
+  background: #eee;
+}
+
+Button:
+padding defined as 8px 16px
 
 input {
   border: 1px solid #ddd;
@@ -32,6 +103,9 @@ input {
   justify-content: space-between;
 }
 
+header & footer:
+similar values can be combined
+
 .left-links, .right-links {
   display: flex;
   align-items: center;
@@ -44,6 +118,9 @@ a {
   color: inherit;
 }
 
+a:
+color should be #666
+
 .content {
   display: flex;
   align-items: center;
@@ -53,6 +130,10 @@ a {
   padding: 50px;
   margin-bottom: 100px;
 }
+
+Content:
+gap, padding, and margin-bottom is not defined here.
+flex: 1 needs to be defined here
 
 .buttons {
   display: flex;
@@ -64,9 +145,22 @@ button {
   padding: 10px;
 }
 
+button:
+padding recommended 8px 16px
+
 .footer {
   display: flex;
   background-color: #eeeeee;
   padding: 15px;
   justify-content: space-between;
 }
+
+Footer:
+display, padding, and justify-content can be combined with header. however, background-color can be defined here.
+
+Solution added ul, however i've used leftlink/rightlinks as a way to remove the list style. also list-style instead of list-style-type was used instead.
+To note:
+list-style: affects the margin
+list-style-type: affects the indicator specifically
+
+*/
